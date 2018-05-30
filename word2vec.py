@@ -260,10 +260,10 @@ with tf.Session(graph=graph) as session:
     # in the list of returned values for session.run()
     _, loss_val = session.run([optimizer, raw_loss], feed_dict=feed_dict)
     average_loss += loss_val
-    print('step:', step)
-    if step % 100 == 0:
+#     print('step:', step)
+    if step % 500 == 0:
       if step > 0:
-        average_loss /= 100
+        average_loss /= 500
       # The average loss is an estimate of the loss over the last 2000 batches.
       print("Average loss at step ", step, ": ", average_loss)
       average_loss = 0
