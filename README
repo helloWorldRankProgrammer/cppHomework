@@ -1,0 +1,12 @@
+RUN:
+python word2vec.py --data raw_data
+
+other default paras: python word2vec.py --data raw_data --lamb 0.1 --window_size 5 --emb_size 300 --batch_size 1000 --adv_hid_size 450 --adv_batch_size 3000 --lr_rate 1.0 --steps 1000000
+
+save:
+embeddings are saved in file:embeddings.pkl every 5000 steps, using file:dictionary.pkl and file:word, you can check the results
+
+other files:
+dictionary.pkl： all the word index in the dictionary.pkl
+word: all the sorted words
+
